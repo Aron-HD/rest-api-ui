@@ -3,6 +3,7 @@ require('dotenv').config();
 
 export default {
   port: 1337,
+  origin: 'http://localhost:3000',
   dbUri: `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@cluster0.2mnhn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   saltWorkFactor: 10,
   accessTokenTtl: '15m',
