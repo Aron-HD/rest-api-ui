@@ -10,7 +10,10 @@ import {
   deleteSessionHandler,
   getUserSessionsHandler
 } from './controller/session.controller';
-import { createUserHandler } from './controller/user.controller';
+import {
+  createUserHandler,
+  getCurrentUserHandler
+} from './controller/user.controller';
 import requireUser from './middleware/requireUser';
 import validateResource from './middleware/validateResource';
 import {
@@ -27,6 +30,8 @@ function routes(app: Express) {
 
   // User creation route - UserHandler is validated with middleware
   app.post('/api/users', validateResource(createUserSchema), createUserHandler);
+
+  app.get('/api/me', requireUser, getCurrentUserHandler);
 
   // Session CRUD routes
   app.post(
