@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/index.module.scss'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/index.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -13,9 +13,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome!
-        </h1>
+        <h1 className={styles.title}>Welcome!</h1>
 
         <p className={styles.description}>
           REST API frontend
@@ -23,36 +21,26 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="/" className={styles.card}>
-            <h2>0 &rarr;</h2>
+          <a href="/auth/register" className={styles.card}>
+            <h2>Register &rarr;</h2>
           </a>
 
           <a href="/" className={styles.card}>
             <h2>1 &rarr;</h2>
           </a>
 
-          <a
-            href="/"
-            className={styles.card}
-          >
+          <a href="/" className={styles.card}>
             <h2>2 &rarr;</h2>
           </a>
 
-          <a
-            href="/"
-            className={styles.card}
-          >
+          <a href="/" className={styles.card}>
             <h2>3 &rarr;</h2>
           </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://aronhd.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://aronhd.com" target="_blank" rel="noopener noreferrer">
           Built by aronhd{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -60,7 +48,7 @@ const Home: NextPage = () => {
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
